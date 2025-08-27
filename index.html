@@ -3,56 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的Win98风格网站</title>
-    <link rel="stylesheet" href="style.css"> <!-- 链接到我们的CSS文件 -->
+    <title>MC模组工作室 - Win98桌面</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="win98-desktop"> <!-- 给body加上经典的灰色背景 -->
-
-    <!-- 我们的第一个窗口 -->
-    <div class="win98-window" style="width: 400px;"> <!-- 用行内样式控制大小，也可以用CSS类 -->
-        
-        <!-- 标题栏 -->
-        <div class="title-bar">
-            <div class="title-bar-text">记事本 - readme.txt</div> <!-- 窗口标题 -->
-            <div class="title-bar-controls">
-                <button aria-label="Minimize"></button> <!-- 最小化按钮 -->
-                <button aria-label="Maximize"></button> <!-- 最大化按钮 -->
-                <button aria-label="Close"></button>   <!-- 关闭按钮 -->
-            </div>
-        </div>
-
-        <!-- 菜单栏 -->
-        <div class="menu-bar">
-            <ul class="menu">
-                <li class="menu-item">文件(F)</li>
-                <li class="menu-item">编辑(E)</li>
-                <li class="menu-item">查看(V)</li>
-                <li class="menu-item">帮助(H)</li>
-            </ul>
-        </div>
-
-        <!-- 窗口主内容区 -->
-        <div class="window-content">
-            <p>欢迎来到我们的MC模组工作室！</p>
-            <p>这个网站正在用Win98风格重建中...</p>
-            <a href = "https://rubystudio.dpdns.org/oldmain">旧版网页</a>
-            <ul>
-                <li>模组列表</li>
-                <li>更新日志</li>
-                <li>下载中心</li>
-            </ul>
-        </div>
-
-        <!-- 状态栏 -->
-        <div class="status-bar">
-            <span class="status-bar-field">就绪</span> <!-- 状态信息 -->
-            <span class="status-bar-field">第 1 行，第 1 列</span> <!-- 状态信息 -->
-        </div>
-
+<body class="win98-desktop">
+    <!-- 壁纸选择菜单 (默认隐藏) -->
+<div class="context-menu" id="wallpaper-menu" style="display: none;">
+    <div class="menu-title">桌面壁纸</div>
+    <div class="menu-item" onclick="changeWallpaper('blue')">蔚蓝 (默认)</div>
+    <div class="menu-item" onclick="changeWallpaper('green')">森林绿</div>
+    <div class="menu-item" onclick="changeWallpaper('red')">砖红色</div>
+    <div class="menu-item" onclick="changeWallpaper('custom')">自定义图片...</div>
+    <div class="menu-separator"></div>
+    <div class="menu-item" onclick="browseCustomWallpaper()">从文件选择</div>
+</div>
+<!-- 自定义图片输入 (隐藏) -->
+<input type="file" id="wallpaper-file" accept="image/*" style="display: none;" onchange="handleWallpaperUpload(this.files)">
+    <!-- 桌面图标 -->
+    <div class="desktop-icon" style="left: 20px; top: 20px;" onclick="openWindow('notepad')">
+        <img src="images/notepad.png" alt="记事本" width="32" height="32">
+        <span>说明.txt</span>
     </div>
 
-    <script src="script.js"></script> <!-- 链接到我们的JS文件 -->
+    <div class="desktop-icon" style="left: 20px; top: 70px;" onclick="openWindow('mods')">
+        <img src="images/folder.png" alt="模组" width="32" height="32">
+        <span>我们的模组</span>
+    </div>
+
+    <div class="desktop-icon" style="left: 20px; top: 120px;" onclick="openWindow('about')">
+        <img src="images/computer.png" alt="关于" width="32" height="32">
+        <span>关于我们</span>
+    </div>
+
+    <!-- 窗口容器 -->
+    <div id="window-container">
+        <!-- 窗口将通过JavaScript动态添加到这里 -->
+    </div>
+
+    <!-- 任务栏 -->
+    <div class="taskbar">
+        <button class="start-button" onclick="toggleStartMenu()">
+            <img src="images/windows-logo.png" alt="开始" width="16" height="16">
+            开始
+        </button>
+        
+        <div class="taskbar-items" id="taskbar-items">
+            <!-- 打开的程序会显示在这里 -->
+        </div>
+        
+        <div class="system-tray">
+            <span id="clock">15:30</span>
+            <div class="tray-icon">📢</div>
+        </div>
+    </div>
+
+    <!-- 开始菜单 -->
+    <div class="start-menu" id="start-menu">
+        <div class="start-menu-header">
+            Windows 98
+        </div>
+        <div class="start-menu-item" onclick="openWindow('notepad')">
+            <img src="images/notepad.png" alt="记事本" width="16" height="16">
+            记事本
+        </div>
+        <div class="start-menu-item" onclick="openWindow('mods')">
+            <img src="images/folder.png" alt="模组" width="16" height="16">
+            我们的模组
+        </div>
+        <div class="start-menu-item" onclick="openWindow('about')">
+            <img src="images/computer.png" alt="关于" width="16" height="16">
+            关于我们
+        </div>
+        <div class="start-menu-separator"></div>
+        <div class="start-menu-item" onclick="shutdown()">
+            <img src="images/shutdown.png" alt="关机" width="16" height="16">
+            关闭系统...
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
-
