@@ -78,26 +78,28 @@ function getWindowTitle(type) {
 function getWindowContent(type) {
     const contents = {
         'notepad': `
-            <p>欢迎来到我们的模组工作室！</p>
-            <p>我们专注于创作有趣、高质量的模组。</p>
-            <p>当前项目：就是这个网站</p>
+            <p>欢迎来到我们的工作室！</p>
+            <p>我们专注于创作有趣、高质量的模组和游戏。</p>
+            <p>当前项目：ruby官网</p>
             <p>状态：开发中...</p>
+            <p>想要回到旧网站吗？</p><a href = "https://rubystudio.dpdns.org/oldmain">点击这里</a><p>。</p>
         `,
         'mods': `
-            <h3>我们的模组作品</h3>
+            <h3>我们的模组与游戏作品</h3>
             <ul>
-                <li>红宝石</li>
+                <li>红宝石与新世界</li>
+                <li>狗猫的世界</li>
             </ul>
             <p>双击模组名称查看详情...</p>
         `,
         'about': `
             <h3>关于我们</h3>
-            <p>我们是一群热爱Minecraft的开发者，</p>
+            <p>我们是一群热爱Minecraft与独立游戏的开发者，</p>
             <p>致力于为社区创造精彩的游戏体验。</p>
             <br>
-            <p>成立时间：2023年</p>
+            <p>成立时间：2024年</p>
             <p>成员：5人</p>
-            <p>已发布模组：1个</p>
+            <p>已发布作品：2个</p>
         `
     };
     return contents[type] || '<p>内容加载中...</p>';
@@ -225,4 +227,5 @@ function shutdown() {
             </div>
         `;
     }
+
 }
