@@ -7,18 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="win98-desktop">
-    <!-- 壁纸选择菜单 (默认隐藏) -->
-<div class="context-menu" id="wallpaper-menu" style="display: none;">
-    <div class="menu-title">桌面壁纸</div>
-    <div class="menu-item" onclick="changeWallpaper('blue')">蔚蓝 (默认)</div>
-    <div class="menu-item" onclick="changeWallpaper('green')">森林绿</div>
-    <div class="menu-item" onclick="changeWallpaper('red')">砖红色</div>
-    <div class="menu-item" onclick="changeWallpaper('custom')">自定义图片...</div>
-    <div class="menu-separator"></div>
-    <div class="menu-item" onclick="browseCustomWallpaper()">从文件选择</div>
-</div>
-<!-- 自定义图片输入 (隐藏) -->
-<input type="file" id="wallpaper-file" accept="image/*" style="display: none;" onchange="handleWallpaperUpload(this.files)">
     <!-- 桌面图标 -->
     <div class="desktop-icon" style="left: 20px; top: 20px;" onclick="openWindow('notepad')">
         <img src="images/notepad.png" alt="记事本" width="32" height="32">
