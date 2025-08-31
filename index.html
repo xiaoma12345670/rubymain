@@ -31,6 +31,18 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .content:hover {
+            transform: translateY(-5px);
+        }
+        .game-link a[href=""] {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .game-link a[href=""]:hover {
+            transform: none;
+            background-color: #b22222;
         }
         h2 {
             color: #b22222;
@@ -121,6 +133,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
