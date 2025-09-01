@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到红宝石工作室更多下载页面</title>
+    <style>
+        body {
+            background-color: #fff5ee;
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        header {
+            background-color: #b22222;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1.5rem;
+            transform: translateY(-20px);
+            animation: slideDown 0.7s ease forwards;
+        }
+        @keyframes slideDown {
+            to { transform: translateY(0); }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease forwards;
+        }
+        .section:nth-child(1) { animation-delay: 0.2s; }
+        .section:nth-child(2) { animation-delay: 0.4s; }
+        .section:nth-child(3) { animation-delay: 0.6s; }
+        
+        @keyframes fadeUp {
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .content {
+            background-color: #fffaf0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .content:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .game-link a[href=""] {
+            opacity: 0.6;
+            cursor: not-allowed;
+            position: relative;
+        }
+        .game-link a[href=""]:hover {
+            transform: none;
+            background-color: #b22222;
+        }
+        .game-link a[href=""]::after {
+            content: "即将推出";
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            opacity: 0;
+            transition: opacity 0.3s ease, top 0.3s ease;
+        }
+        .game-link a[href=""]:hover::after {
+            opacity: 1;
+            top: -30px;
+        }
+        
+        h2 {
+            color: #b22222;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #b22222;
+            transition: width 0.5s ease;
+        }
+        .content:hover h2::after {
+            width: 100%;
+        }
+        
+        p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .game-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .game-link {
+            text-align: center;
+        }
+        
+        .game-link a {
+            display: block;
+            background-color: #b22222;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .game-link a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.7s ease;
+        }
+        .game-link a:hover::before {
+            left: 100%;
+        }
+        .game-link a:hover {
+            background-color: #8b0000;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 7px 14px rgba(139, 0, 0, 0.3);
+        }
+        
+        footer {
+            background-color: #b22222;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.8s forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* 添加滚动动画 */
+        @media (prefers-reduced-motion: no-preference) {
+            .section {
+                animation: fadeUp 0.8s ease forwards;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        欢迎来到红宝石工作室更多下载页面
+    </header>
+    
+    <div class="container">
+        <div class="section">
+            <div class="content">
+                <h2>红宝石与新世界A版1.X下载下载</h2>
+                <p>总之就是下载</p>
+                <div class="game-links">
+                    <div class="game-link">
+                        <a href="download/红宝石与新世界1.1.0正式版.jar" target="_blank">最新版本：1.1.0</a>
+                    </div>
+                    <div class="game-link">
+                        <a href="download/红宝石与新世界1.0.0正式版.jar" target="_blank">历史版本：1.0.0</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="content">
+                <h2>红宝石与新世界A版0.13~0.15下载</h2>
+                <p>总之就是下载</p>
+                <div class="game-links">
+                    <div class="game-link">
+                        <a href="download/红宝石与新世界0.15.0正式版.jar" target="_blank">历史版本：0.15.0</a>
+                    </div>
+                    <div class="game-link">
+                        <a href="download/红宝石与新世界0.14.0正式版.jar" target="_blank">历史版本：0.14.0</a>
+                    </div>
+                    <div class="game-link">
+                        <a href="download/红宝石与新世界0.13.0正式版.jar" target="_blank">历史版本：0.13.0</a>
+                    </div>
+                    <div class="game-link">
+                        <a href="download/红宝石与新世界0.13.0正式版.jar" target="_blank">历史版本：0.13.0</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="content">
+                <h2>红宝石与新世界B版下载</h2>
+                <p>总之就是下载</p>
+                <div class="game-links">
+                    <div class="game-link">
+                        <a href="download/rubyneo-1.0.0-neoforge-1.21.4.jar" target="_blank">最新版本：1.0.0</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="content">
+                <h2>狗猫的世界SB3原版0.9.3~a1.0.0下载</h2>
+                <p>总之就是下载</p>
+                <div class="game-links">
+                    <div class="game-link">
+                        <a href="download/Docat's world Alpha1.0.sb3" target="_blank">最新版本：Alpha1.0.0</a>
+                    </div>
+                    <div class="game-link">
+                        <a href="download/Docat's world 0.9.7.sb3" target="_blank">历史版本：0.9.7</a>
+                    </div>
+                    <div class="game-link">
+                        <a href="download/Docat's world 0.9.6.sb3" target="_blank">历史版本：0.9.6</a>
+                    </div>
+                    <div class="game-link">
+                        <a href="download/Docat's world 0.9.3.sb3" target="_blank">历史版本：0.9.3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 红宝石工作室. 保留所有权利。
+    </footer>
+</body>
+</html>
