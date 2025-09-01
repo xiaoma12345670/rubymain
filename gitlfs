@@ -5,6 +5,7 @@ git lfs install
 git lfs track "*.jar"
 git lfs track "*.sb3"
 git lfs track "*.png"
+git lfs track "*.zip"
 
 # 添加跟踪文件
 git add .gitattributes
